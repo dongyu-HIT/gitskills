@@ -4,4 +4,14 @@ git commit 将git暂存区文件写入主分支并清空暂存区
 git status 查看git仓库文件状态
 git diff 查看git文件修改差异
 git log 查看git仓库提交日志
-git reset 版本回退 Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交1094adb...（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+git reset 版本回退 Git必须知道当前版本是哪个版本，在Git中，
+			用HEAD表示当前版本，也就是最新的提交1094adb...（
+			注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，
+			上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，
+			所以写成HEAD~100。
+git checkout -- file 丢弃在工作区内的修改 即从版本库或是从暂存区中获得之前版本的文件
+git reset HEAD file 将提交到暂存区内的修改撤销，回退到工作区内，
+					再使用git checkout命令可以撤销工作区内的修改
+
+工作区-->git add-->暂存区-->git commit-->版本仓库
+工作区<--git checkout -- file<--暂存区<--git reset HEAD file<--版本仓库
