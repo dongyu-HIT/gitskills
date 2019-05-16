@@ -1,0 +1,6 @@
+git init 初始化git仓库
+git add 添加文件至git暂存区
+git commit 将git暂存区文件写入主分支并清空暂存区
+git status 查看git仓库文件状态
+git diff 查看git文件修改差异
+git log 查看git仓库提交日志
